@@ -23,4 +23,8 @@ export class CreateToDoDTO {
   @ApiProperty({ example: '22-22' })
   @IsString()
   to: string;
+
+  @IsString()
+  @IsOptional()
+  macAddress: any;
 }
