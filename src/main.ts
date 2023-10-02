@@ -9,7 +9,6 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }),
   );
-
   const config = new DocumentBuilder()
     .setTitle('Your API')
     .setDescription('API description')

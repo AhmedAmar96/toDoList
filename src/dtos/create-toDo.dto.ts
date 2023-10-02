@@ -3,6 +3,7 @@ import { IsNumber, IsOptional, IsString, Length } from 'class-validator';
 
 export class CreateToDoDTO {
   @IsNumber()
+  @IsOptional()
   id: number;
 
   @ApiProperty({ example: 'play game' })

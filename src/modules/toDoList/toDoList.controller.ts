@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { toDoListService } from './toDoList.service';
-import { CreateToDoDTO } from 'src/dtos/create-toDo.dto';
+import { CreateToDoDTO } from './../../dtos/create-toDo.dto';
 import { ApiTags } from '@nestjs/swagger';
 
 @Controller('toDoList')
