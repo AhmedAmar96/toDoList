@@ -31,9 +31,14 @@ export class toDoListService {
   getAll() {
     const networkInterfaces = os.networkInterfaces();
     const macAddress = networkInterfaces.wlp2s0[0].mac;
-    const userToDos = this.allToDoList.filter(
-      (e) => e.macAddress == macAddress,
-    );
+    let userToDos = this.allToDoList.filter((e) => e.macAddress == macAddress);
+    let newUserToDos = [];
+    userToDos.forEach((e) => {
+      newUserToDos.push(e);
+    });
+    newUserToDos.forEach((e) => {
+      delete e['macAddress'];
+    });
     return userToDos;
   }
 
